@@ -24,7 +24,7 @@ void insert_integer(struct node** tree, int value) {
 	
 	if ( *tree != NULL ){
 		if (value < (*tree)->value) {			//Compare the value of parent node and the child node
-			if ((*tree)->left != NULL) {		//When the parent node has left child,  
+			if ((*tree)->left != NULL) {		//When the parent node has left child, doing recursion to find a left child which does not have a left child
 				insert_integer(&((*tree)->left), value);
 			}
 			else {
